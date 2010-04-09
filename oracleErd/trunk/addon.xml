@@ -1,0 +1,23 @@
+<?xml version="1.0" ?>
+<AddOn xmlns="http://umlfri.org/xmlschema/addon.xsd">
+    <Identity uri="urn:umlfri.org:metamodel:oracleErd" />
+    
+    <FriendlyName name="Oracle ERD" version="0.0.1" />
+    <Author>
+        <Name name="Jan Janech" />
+        <Homepage url="http://umlfri.org" />
+        
+        <CommonLicense name="GPL-3" />
+    </Author>
+    
+    <Icon path="icons/OracleERD.png" />
+    <Description>
+        Entity-relationship diagram (ERD) is an abstract and conceptual representation of data.
+    </Description>
+    
+    <Metamodel>
+        <Path path="metamodel" />
+        
+        <Template path="templates/empty.fritx" name="Empty Oracle ERD model" />
+    </Metamodel>
+</AddOn>

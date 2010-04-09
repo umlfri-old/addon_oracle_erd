@@ -1,0 +1,22 @@
+<Domain id="relationship" xmlns="http://umlfri.kst.fri.uniza.sk/xmlschema/metamodel.xsd" >
+    <Attribute id="cardinality" name="Cardinality" >
+		<Enum default="1:1">
+        	<Value>1:1</Value>
+        	<Value>1:N</Value>
+        	<Value>N:1</Value>
+        	<Value>M:N</Value>
+		</Enum>
+    </Attribute>
+    <Attribute id="beginMandatority" name="Begin mandatority" >
+		<Bool default="True" />
+    </Attribute>
+    <Attribute id="endMandatority" name="End mandatority" >
+		<Bool default="True" />
+    </Attribute>
+    <Attribute id="beginName" name="Begin name" >
+        <Str />
+    </Attribute>
+    <Attribute id="endName" name="End name" >
+        <Str />
+    </Attribute>
+</Domain>

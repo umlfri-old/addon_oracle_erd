@@ -7,11 +7,7 @@
   <objects>
     <object type="Package" id="0">
       <dict>
-        <text name="note"></text>
-        <text name="scope">Private</text>
-        <text name="abstract">False</text>
         <text name="name">Project</text>
-        <text name="stereotype"></text>
       </dict>
     </object>
   </objects>

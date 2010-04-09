@@ -1,0 +1,49 @@
+<ConnectionType xmlns="http://umlfri.kst.fri.uniza.sk/xmlschema/metamodel.xsd" id="Relationship">
+    <Icon path="icons/relationship.png"/>
+    <Domain id="relationship"/>
+    <Appearance>
+        <Switch value="#(bool(self.beginMandatority), bool(self.endMandatority))">
+            <Case condition="#(True, True)">
+                <ConnectionLine style="solid" color="##000000" />
+            </Case>
+            <Case condition="#(False, True)">
+                <ConnectionLine style="dot" color="##000000" end="50%" />
+                <ConnectionLine style="solid" color="##000000" begin="50%" />
+            </Case>
+            <Case condition="#(True, False)">
+                <ConnectionLine style="solid" color="##000000" end="50%" />
+                <ConnectionLine style="dot" color="##000000" begin="50%" />
+            </Case>
+            <Case condition="#(False, False)">
+                <ConnectionLine style="dot" color="##000000" />
+            </Case>
+        </Switch>        
+        
+        <Switch value="#self.cardinality">
+            <Case condition="1:N">
+                <ConnectionArrow index="-1" style="multiple_cardinality_arrow" size="20" color="##000000"/>
+            </Case>
+            <Case condition="N:1">
+                <ConnectionArrow index="0" style="multiple_cardinality_arrow" size="20" color="##000000"/>
+            </Case>
+            <Case condition="M:N">
+                <ConnectionArrow index="-1" style="multiple_cardinality_arrow" size="20" color="##000000"/>
+                <ConnectionArrow index="0" style="multiple_cardinality_arrow" size="20" color="##000000"/>
+            </Case>
+        </Switch>        
+        <Label position="source">
+            <Condition condition="#self.beginName">
+                <Rectangle fill="##FFFFFF">
+                    <TextBox text="#self.beginName" font="Times New Roman 12" color="##000000"/>
+                </Rectangle>
+            </Condition>
+        </Label>
+        <Label position="destination">
+            <Condition condition="#self.endName">
+                <Rectangle fill="##FFFFFF">
+                    <TextBox text="#self.endName" font="Times New Roman 12" color="##000000"/>
+                </Rectangle>
+            </Condition>
+        </Label>
+    </Appearance>
+</ConnectionType>

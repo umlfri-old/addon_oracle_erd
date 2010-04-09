@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ElementType id="Entity" xmlns="http://umlfri.kst.fri.uniza.sk/xmlschema/metamodel.xsd">
+    <Icon path="icons/entity.png" />
+    <Domain id="entity" identity="name" />
+    <Connections>
+        <Item value="Relationship" allowrecursive="1"/>
+    </Connections>
+    <Appearance>
+        <Sizer minwidth="170" minheight="110">
+            <Rectangle fill="##DDDDDD" border="##000000" righttop="20 rounded_corner" rightbottom="20 rounded_corner" lefttop="20 rounded_corner" leftbottom="20 rounded_corner">
+                <Padding padding="15">
+                    <HBox>
+                        <Padding bottom="3">
+                            <TextBox text="#self.name.upper()" font="Times New Roman bold 12" color="##000000"/>
+                        </Padding>
+                        
+                        <Loop collection="#self.attributes">
+                            <Condition condition="#name and mandatority == 'uid'">
+                                <VBox>
+                                    <Sizer minwidth="20">
+                                        <TextBox text="## " font="Times New Roman 12" color="##000000"/>
+                                    </Sizer>
+                                    
+                                    <TextBox text="#name" font="Times New Roman 12" color="##000000"/>
+                                </VBox>
+                            </Condition>
+                        </Loop>
+                        
+                        <Loop collection="#self.attributes">
+                            <Condition condition="#name and mandatority != 'uid'">
+                                <VBox>
+                                    <Sizer minwidth="20">
+                                        <Switch value="#mandatority">
+                                            <Case condition="mandatory">
+                                                <TextBox text="* " font="Times New Roman 12" color="##000000"/>
+                                            </Case>
+                                            <Case condition="optional">
+                                                <TextBox text="&#9702; " font="Times New Roman 12" color="##000000"/>
+                                            </Case>
+                                        </Switch>
+                                    </Sizer>
+                                    
+                                    <TextBox text="#name" font="Times New Roman 12" color="##000000"/>
+                                </VBox>
+                            </Condition>
+                        </Loop>
+                    </HBox>
+                </Padding>
+            </Rectangle>
+        </Sizer>
+    </Appearance>
+</ElementType>

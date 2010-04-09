@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<umlproject xmlns="http://umlfri.kst.fri.uniza.sk/xmlschema/umlproject.xsd" saveversion="1.1.0">
+  <metamodel>
+    <uri>urn:umlfri.org:metamodel:oracleErd</uri>
+    <version>0.0.1</version>
+  </metamodel>
+  <objects>
+    <object type="Package" id="0">
+      <dict>
+        <text name="note"></text>
+        <text name="scope">Private</text>
+        <text name="abstract">False</text>
+        <text name="name">Project</text>
+        <text name="stereotype"></text>
+      </dict>
+    </object>
+  </objects>
+  <connections/>
+  <diagrams>
+    <diagram id="1" type="Erd diagram">
+      <dict>
+        <text name="name">Erd diagram</text>
+      </dict>
+    </diagram>
+  </diagrams>
+  <projecttree>
+    <node id="0">
+      <diagrams>
+        <diagram id="1" default="true"/>
+      </diagrams>
+    </node>
+  </projecttree>
+  <counters />
+</umlproject>

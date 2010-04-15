@@ -17,7 +17,7 @@
             <Case condition="#(False, False)">
                 <ConnectionLine style="dot" color="##000000" />
             </Case>
-        </Switch>        
+        </Switch>
         
         <Switch value="#self.cardinality">
             <Case condition="1:N">
@@ -30,7 +30,24 @@
                 <ConnectionArrow index="-1" style="multiple_cardinality_arrow" size="20" color="##000000"/>
                 <ConnectionArrow index="0" style="multiple_cardinality_arrow" size="20" color="##000000"/>
             </Case>
-        </Switch>        
+        </Switch>
+        
+        <Condition condition="#not self.beginTransferable">
+            <ConnectionArrow index="0" style="nontransferable_arrow" size="12" color="##000000" fill="##FFFFFF"/>
+        </Condition>
+        
+        <Condition condition="#not self.endTransferable">
+            <ConnectionArrow index="-1" style="nontransferable_arrow" size="12" color="##000000" fill="##FFFFFF"/>
+        </Condition>
+        
+        <Condition condition="#self.beginBarred">
+            <ConnectionArrow index="0" style="barred_arrow" size="20" color="##000000"/>
+        </Condition>
+        
+        <Condition condition="#self.endBarred">
+            <ConnectionArrow index="-1" style="barred_arrow" size="20" color="##000000"/>
+        </Condition>
+        
         <Label position="source">
             <Condition condition="#self.beginName">
                 <Rectangle fill="##FFFFFF">
@@ -38,6 +55,7 @@
                 </Rectangle>
             </Condition>
         </Label>
+        
         <Label position="destination">
             <Condition condition="#self.endName">
                 <Rectangle fill="##FFFFFF">

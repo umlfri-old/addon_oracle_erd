@@ -19,4 +19,16 @@
     <Attribute id="endName" name="End name" >
         <Str />
     </Attribute>
+    <Attribute id="beginTransferable" name="Begin transferable" >
+        <Bool default="True" />
+    </Attribute>
+    <Attribute id="endTransferable" name="End transferable" >
+        <Bool default="True" />
+    </Attribute>
+    <Attribute id="beginBarred" name="Begin barred" >
+        <Bool default="False" />
+    </Attribute>
+    <Attribute id="endBarred" name="End barred" >
+        <Bool default="False" />
+    </Attribute>
 </Domain>

@@ -2,6 +2,8 @@
 <Paths xmlns="http://umlfri.kst.fri.uniza.sk/xmlschema/metamodel.xsd">
     <!-- Arrows -->
     <Path id="multiple_cardinality_arrow" path="M -0.5,0 L 0,-1 L 0.5,0" />
+    <Path id="nontransferable_arrow" path="M -0.5,-2.7071068 L 0,-3.4142135 L 0.5,-2.7071068 L 0,-2 L -0.5,-2.7071068 z" />
+    <Path id="barred_arrow" path="M 0.5,-2.3 L -0.5,-2.3" />
     
     <!-- Corners -->
     <Path id="rounded_corner" path="M 0,1 C 0,0.446 0.446,0 1,0" />

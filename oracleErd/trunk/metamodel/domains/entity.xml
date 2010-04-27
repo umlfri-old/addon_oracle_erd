@@ -11,6 +11,7 @@
         	    <Attribute id="mandatority" name="Mandatority" >
         	        <Enum default="optional">
 						<Value>uid</Value>
+	        	        <Value>alternative uid</Value>
 	        	        <Value>mandatory</Value>
 	        	        <Value>optional</Value>
 					</Enum>

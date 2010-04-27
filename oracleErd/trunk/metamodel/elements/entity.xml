@@ -27,7 +27,19 @@
                         </Loop>
                         
                         <Loop collection="#self.attributes">
-                            <Condition condition="#name and mandatority != 'uid'">
+                            <Condition condition="#name and mandatority == 'alternative uid'">
+                                <VBox>
+                                    <Sizer minwidth="20">
+                                        <TextBox text="(#)" font="Times New Roman 12" color="##000000"/>
+                                    </Sizer>
+                                    
+                                    <TextBox text="#name" font="Times New Roman 12" color="##000000"/>
+                                </VBox>
+                            </Condition>
+                        </Loop>
+                        
+                        <Loop collection="#self.attributes">
+                            <Condition condition="#name and mandatority in ('optional', 'mandatory')">
                                 <VBox>
                                     <Sizer minwidth="20">
                                         <Switch value="#mandatority">

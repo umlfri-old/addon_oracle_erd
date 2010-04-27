@@ -1,0 +1,10 @@
+<Domain id="arc" xmlns="http://umlfri.kst.fri.uniza.sk/xmlschema/metamodel.xsd">
+    <Attribute id="orientation" name="Orientation" >
+		<Enum default="Bottom">
+        	<Value>Right</Value>
+        	<Value>Left</Value>
+        	<Value>Top</Value>
+        	<Value>Bottom</Value>
+		</Enum>
+    </Attribute>
+</Domain>

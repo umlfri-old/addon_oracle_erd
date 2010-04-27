@@ -5,6 +5,8 @@
     <Special swimlines="0" lifelines="0" />
     <Elements>
         <Item value="Entity" />
+        <Item value="Arc" />
+        <Item value="ArcCircle" />
     </Elements>
     <Connections>
         <Item value="Relationship" />
